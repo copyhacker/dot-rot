@@ -2,7 +2,7 @@ DOTROT_HOME = File.dirname(__FILE__)
 DOTROT_BACKUPS = File.join(DOTROT_HOME, 'backups')
 
 # TODO: Move to yaml or somesuch
-DOTROT_FILES = %w{ bash_history bash_profile profile bashrc boom gitconfig ssh }
+DOTROT_FILES = %w{ bash_profile profile bashrc boom gitconfig }
 
 require 'lib/dotrot'
 
@@ -13,11 +13,7 @@ task :install do
   DOTROT_FILES.each do |source|
     symlink_dotfile source
   end
-  # symlink_dotfile "bash_profile"
-  # symlink_dotfile "gitconfig"
-  # symlink_dotfile "gemrc"
-  # symlink_dotfile "zshrc"
-  # KeyBindingsInstaller.install!
+
   puts "\nNow run this command to reload the shell:\n\n"
   puts "  source ~/.bash_profile\n\n"
 end
