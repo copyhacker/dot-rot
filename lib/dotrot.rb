@@ -22,6 +22,7 @@ def symlink_dotfile(name, dry_run = false)
   backup_dotfile(target, dry_run)
 
   puts "** symlinking #{name}... "
+  puts "** linking     #{source} to #{target}"
   FileUtils.ln_s source, target unless dry_run
   puts '** done!'
   puts
