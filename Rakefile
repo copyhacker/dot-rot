@@ -4,7 +4,7 @@ DOTROT_BACKUPS = File.join(DOTROT_HOME, 'backups')
 # TODO: Move to yaml or somesuch
 DOTROT_FILES = %w{ bash_profile profile bashrc viminfo boom gitconfig git-prompt.conf }
 
-require 'lib/dotrot'
+require "#{DOTROT_HOME}/lib/dotrot"
 
 task :default => [:install]
 
