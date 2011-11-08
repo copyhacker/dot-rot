@@ -24,6 +24,7 @@ alias be='bundle exec'
 alias b='bundle exec'
 
 alias git='~/bin/hub'
+alias vi='vim'
 
 # Shortcuts
 alias ks='cd ~/Sites/kickserv'
