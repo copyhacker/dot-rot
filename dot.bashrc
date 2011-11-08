@@ -23,7 +23,7 @@ alias glg='git log --pretty=oneline | grep' # search commits
 alias be='bundle exec'
 alias b='bundle exec'
 
-alias git=hub
+alias git='~/bin/hub'
 
 # Shortcuts
 alias ks='cd ~/Sites/kickserv'
@@ -35,4 +35,4 @@ export NODE_PATH=/usr/local/lib/node
 
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
 
-[[ $- == *i* ]]   &&   . ~/code/git-prompt/git-prompt.sh
+if [ -s ~/.git-prompt.sh ] ; then [[ $- == *i* ]]   &&   . ~/.git-prompt.sh ; fi
