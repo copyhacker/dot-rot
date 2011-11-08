@@ -16,7 +16,7 @@ task :install do
 
   puts "\nFirst, ln -s ./dot.vim ~/.vim"
   puts "Now run this command to reload the shell:\n\n"
-  puts "  source ~/.bash_profile\n\n"
+  puts " cd ~ && source .bash_profile\n\n"
 end
 
 namespace :install do
