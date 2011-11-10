@@ -1,0 +1,4 @@
+hardstatus alwayslastline
+##what is displayed
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%=%{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}]'
+hardstatus string "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
