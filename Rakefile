@@ -14,8 +14,6 @@ task :install do
     symlink_dotfile source
   end
 
-  puts "\nFirst install Janus vim config:"
-  puts "\n cd dot.vim && rake"
   puts "Now run this command to reload the shell:\n\n"
   puts " cd ~ && source .bash_profile\n\n"
 end
