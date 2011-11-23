@@ -2,7 +2,8 @@ DOTROT_HOME = File.dirname(__FILE__)
 DOTROT_BACKUPS = File.join(DOTROT_HOME, 'backups')
 
 # TODO: Move to yaml or somesuch
-DOTROT_FILES = %w{ bash_profile profile screenrc vim vimrc gvimrc boom gitconfig git-prompt.conf git-prompt.sh }
+DOTROT_FILES = %w{ bash_profile profile screenrc boom gitconfig git-prompt.conf git-prompt.sh }
+EXTRA_DOTFILES_TO_BACKUP = %w{ vim vimrc gvimrc }
 
 require "#{DOTROT_HOME}/lib/dotrot"
 
@@ -10,10 +11,19 @@ task :default => [:install]
 
 desc "Install dotfiles"
 task :install do
+  puts "Backing up extra files."
+  EXTRA_DOTFILES_TO_BACKUP.each do |target|
+    puts "** backing up #{name}..."
+    backup_dotfile(File.join(ENV['HOME'], ".#{name}"))
+  end
+  
   DOTROT_FILES.each do |source|
     symlink_dotfile source
   end
 
+  puts "Next steps:"
+  puts "Install vim config:"
+  puts "curl https://raw.github.com/carlhuda/janus/master/bootstrap.sh -o - | sh"
   puts "Now run this command to reload the shell:\n\n"
   puts " cd ~ && source .bash_profile\n\n"
 end
