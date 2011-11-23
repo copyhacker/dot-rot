@@ -2,7 +2,7 @@ DOTROT_HOME = File.dirname(__FILE__)
 DOTROT_BACKUPS = File.join(DOTROT_HOME, 'backups')
 
 # TODO: Move to yaml or somesuch
-DOTROT_FILES = %w{ bash_profile profile screenrc boom gitconfig git-prompt.conf git-prompt.sh }
+DOTROT_FILES = %w{ bash_profile profile screenrc vim vimrc gvimrc boom gitconfig git-prompt.conf git-prompt.sh }
 
 require "#{DOTROT_HOME}/lib/dotrot"
 
