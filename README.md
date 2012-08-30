@@ -1,0 +1,1 @@
+tl;dr: `curl -L http://bit.ly/dot-rot-boot | sh`
