@@ -23,7 +23,7 @@ task :install do
 
   puts "Next steps:"
   puts "Install vim config:"
-  puts "curl https://raw.github.com/carlhuda/janus/master/bootstrap.sh -o - | sh"
+  puts "curl -Lo- https://bit.ly/janus-bootstrap | bash"
   puts "Now run this command to reload the shell:\n\n"
   puts " cd ~ && source .bash_profile\n\n"
 end
