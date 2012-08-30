@@ -21,7 +21,7 @@ task :install do
     symlink_dotfile source
   end
 
-  puts "Next steps:"
+  puts "Next steps (if you ran the rake task manually):"
   puts "Install vim config:"
   puts "curl -Lo- https://bit.ly/janus-bootstrap | bash"
   puts "Now run this command to reload the shell:\n\n"
