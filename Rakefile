@@ -12,9 +12,9 @@ task :default => [:install]
 desc "Install dotfiles"
 task :install do
   puts "Backing up extra files."
-  EXTRA_DOTFILES_TO_BACKUP.each do |target|
-    puts "** backing up #{name}..."
-    backup_dotfile(File.join(ENV['HOME'], ".#{name}"))
+  EXTRA_DOTFILES_TO_BACKUP.each do |file|
+    puts "** backing up #{file}..."
+    backup_dotfile(File.join(ENV['HOME'], ".#{file}"))
   end
   
   DOTROT_FILES.each do |source|

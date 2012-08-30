@@ -2,8 +2,8 @@ source .bashrc
 
 source .profile
 
-# silliness for SSK
-if [ -s ~/Sites/shasta/config/env_vars.sh ] ; then source ~/Sites/shasta/config/env_vars.sh ; fi
+# # silliness for SSK
+# if [ -s ~/Sites/shasta/config/env_vars.sh ] ; then source ~/Sites/shasta/config/env_vars.sh ; fi
 
 ###begin-jump-bash_profile
 #
@@ -22,3 +22,12 @@ function jump {
 alias jj="jump -a"
 
 ###end-jump-bash_profile
+
+# {{{
+# Node Completion - Auto-generated, do not touch.
+shopt -s progcomp
+for f in $(command ls ~/.node-completion); do
+  f="$HOME/.node-completion/$f"
+  test -f "$f" && . "$f"
+done
+# }}}
