@@ -1,6 +1,5 @@
-source .bashrc
-
-source .profile
+source ~/.bashrc
+source ~/.profile
 
 # # silliness for SSK
 # if [ -s ~/Sites/shasta/config/env_vars.sh ] ; then source ~/Sites/shasta/config/env_vars.sh ; fi
@@ -31,3 +30,6 @@ for f in $(command ls ~/.node-completion); do
   test -f "$f" && . "$f"
 done
 # }}}
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
