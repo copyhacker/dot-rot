@@ -3,7 +3,7 @@
 `curl -L http://bit.ly/boot-dot-rot | bash && source ~/.bash_profile`
 
 
-# Dependencies:
+# Dependencies
 
 - Git (obvs)
 - Curl
